@@ -21,8 +21,11 @@ use Arryanggaputra\ViewReactSource;
 
 $reactSource = new ViewReactSource('/path/your/react/or/bundle/*.js');
 $view        = new ViewReact($reactSource);
-echo $view->render('YourComponent', [
-    'props'        => 'value',
-    'anotherProps' => 'value',
+echo $view->render('HelloWorldComponent', [
+    'name'        => 'Jon',
 ]);
+```
+### Result
+```html
+<div data-reactid="11"><div data-reactid="12"><h1 data-reactid="13">Hello World <b>John</b></h1></div></div>
 ```
