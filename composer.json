@@ -1,0 +1,23 @@
+{
+    "name": "arryanggaputra/viewreact",
+    "description": "Render a ReactJS component based on react-php-v8js",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+    {
+        "name": "Arryangga Aliev Pratamaputra",
+        "email": "arryanggaputra@gmail.com"
+    }],
+    "require":
+    {
+        "ext-v8js": ">=0.1.3"
+    },
+    "autoload":
+    {
+        "psr-4":
+        {
+            "Arryanggaputra\\": "src/ViewReact"
+        }
+    },
+    "minimum-stability": "dev"
+}
