@@ -14,7 +14,19 @@ For a walkthrough how to setup V8Js PHP extension, use the links below:
 - [On Windows](https://github.com/preillyme/v8js/blob/master/README.Win32.md)
 
 ## Usage
+1. Prepare or create ReactJs Bundle Script
+```javascript
+import React from 'react'
+import ReactDOM from 'react-dom';
+import ReactDOMServer from 'react-dom/server';
+import HelloWorldComponent from "./HelloWorldComponent";
 
+window.React = React;
+window.ReactDOM = ReactDOM;
+window.ReactDOMServer = ReactDOMServer;
+window.HelloWorldComponent = HelloWorldComponent;
+```
+2. Put ReactJs bundle script to `ViewReactSource`
 ```php
 use Arryanggaputra\ViewReact;
 use Arryanggaputra\ViewReactSource;
@@ -25,6 +37,7 @@ echo $view->render('HelloWorldComponent', [
     'name'        => 'Jon',
 ]);
 ```
+
 ### Result
 ```html
 <div data-reactid="11"><div data-reactid="12"><h1 data-reactid="13">Hello World <b>John</b></h1></div></div>
